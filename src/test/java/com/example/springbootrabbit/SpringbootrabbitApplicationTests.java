@@ -18,8 +18,8 @@ public class SpringbootrabbitApplicationTests {
 
     @Test
     public void testStringSend() {
-        for (int i = 0; i < 10; i++) {
-            producer.stringSend();
-        }
+        producer.topicTopic1Send();
+        producer.topicTopic2Send();
+        producer.topicTopic3Send();
     }
 }
