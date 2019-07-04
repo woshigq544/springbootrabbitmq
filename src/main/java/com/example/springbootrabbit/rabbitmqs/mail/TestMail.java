@@ -29,6 +29,7 @@ public class TestMail {
         System.out.println("现在时间：" + dateFormat.format(new Date()));
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(from);
+        //目标邮箱
         message.setTo("544279513@qq.com");
         message.setSubject("主题：emmmmmmmmmmm");
         message.setText("测试邮件内容1");
