@@ -65,6 +65,4 @@ public class HelloSender {
         // 这条信息将会被topic.b、topic.b接收
         this.rabbitTemplate.convertAndSend("topicExchange", "topic.m.z", dateString);
     }
-
-
 }
