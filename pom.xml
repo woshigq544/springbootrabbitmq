@@ -62,6 +62,25 @@
         </dependency>
         <!--数据导出依赖 End excel-->
 
+        <!--短信服务依赖-->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+
+        <dependency>  <!--实现springboot的热加载-->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>true</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -69,6 +88,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--springboot 热加载 fork :  如果没有该项配置，肯定devtools不会起作用，即应用不会restart -->
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
             </plugin>
         </plugins>
     </build>

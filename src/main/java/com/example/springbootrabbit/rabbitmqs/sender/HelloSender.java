@@ -26,6 +26,7 @@ public class HelloSender {
         this.rabbitTemplate.convertAndSend("string", dateString);
     }
 
+    //fanout的生产方法。
     public void fanoutSend() {
         Date date = new Date();
         String dateString = new SimpleDateFormat("YYYY-mm-DD hh:MM:ss").format(date);
@@ -35,7 +36,7 @@ public class HelloSender {
     }
 
 
-
+//topic生产方法
     public void topicTopic1Send() {
         Date date = new Date();
         String dateString = new SimpleDateFormat("YYYY-mm-DD hh:MM:ss").format(date);

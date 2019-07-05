@@ -1,5 +1,6 @@
 package com.example.springbootrabbit.rabbitmqs.controllers;
 
+import com.example.springbootrabbit.rabbitmqs.mail.TestMail;
 import com.example.springbootrabbit.rabbitmqs.sender.HelloSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,8 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
     @Autowired
     private HelloSender producer;
+
+
+    @Autowired
+    private TestMail testmail;
+
+
     @RequestMapping("/ok")
     public String asdas(){
+
+        System.out.println("新的代码");
+
+        System.out.println("邮件发送");
+
+        //testmail.reportCurrentTime();
         producer.topicTopic1Send();
         producer.topicTopic2Send();
         producer.topicTopic3Send();

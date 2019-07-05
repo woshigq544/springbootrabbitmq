@@ -1,5 +1,6 @@
 package com.example.springbootrabbit.rabbitmqs.reservers;
 
+import com.example.springbootrabbit.rabbitmqs.mail.TestMail;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -21,14 +22,7 @@ public class TopicAConsumer {
      */
     @RabbitHandler
     public void recieved(String msg) {
-        for(int i = 0 ; i < 10 ; i++){
-            System.out.println("AAAAAAA");
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        System.out.println("topica+++++++++++++++++++++++++");
         System.out.println("[topic.a] recieved message:接受信息 = " + msg);
     }
 }
