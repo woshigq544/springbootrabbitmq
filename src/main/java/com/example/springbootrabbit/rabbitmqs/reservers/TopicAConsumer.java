@@ -16,13 +16,17 @@ public class TopicAConsumer {
     @Autowired
     private AmqpTemplate rabbitmqTemplate;
 
+    @Autowired
+    private TestMail testmail;
+
     /**
      * 消息消费
      * @RabbitHandler 代表此方法为接受到消息后的处理方法
      */
     @RabbitHandler
     public void recieved(String msg) {
-        System.out.println("topica+++++++++++++++++++++++++");
+        System.out.println("发邮件中+++++++++");
+        testmail.reportCurrentTime();
         System.out.println("[topic.a] recieved message:接受信息 = " + msg);
     }
 }

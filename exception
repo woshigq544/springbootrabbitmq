@@ -1,0 +1,4 @@
+@Component注解：
+在持久层、业务层和控制层分别採用 @Repository、@Service 和 @Controller 对分层中的类进行凝视，而用 @Component 对那些比較中立的类进行凝视
+
+内部资源可以用@AutoWrite来注解
