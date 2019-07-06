@@ -19,18 +19,13 @@ public class TopicBConsumer {
     private AmqpTemplate rabbitmqTemplate;
 
 
-    @Autowired
-    private TestMail testmail;
 
     /**
      * 消息消费
      * @RabbitHandler 代表此方法为接受到消息后的处理方法
      */
     @RabbitHandler
-    public void recieved(String msg) throws ClientException {
-        System.out.println("topicb+++++++++++++++++++++++++");
-        testmail.reportCurrentTime();
-        AliyunSmsUtils.sendSms("18580369113","hello");
+    public void recieved(String msg) {
         System.out.println("[topic.b] recieved message:接受信息 = " + msg);
     }
 }

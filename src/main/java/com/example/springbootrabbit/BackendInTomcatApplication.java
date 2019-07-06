@@ -12,7 +12,7 @@ public class BackendInTomcatApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(SpringbootrabbitApplication.class);
+        return application.sources(SpringbootrabbitstarterApplication.class);
     }
 
 }
